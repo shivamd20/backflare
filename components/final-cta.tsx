@@ -1,6 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Star } from "lucide-react"
 import Link from "next/link"
+import { signIn } from "next-auth/react"
 
 export function FinalCTA() {
   return (
@@ -17,10 +20,15 @@ export function FinalCTA() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center mb-12">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-              Backup Google Drive Now
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Button
+  size="lg"
+  className="bg-orange-500 hover:bg-orange-600 text-white"
+  onClick={() =>  signIn("google")
+}
+>
+  Backup Google Drive Now
+  <ArrowRight className="ml-2 h-4 w-4" />
+</Button>
             <Button size="lg" variant="outline" asChild className="border-gray-300 dark:border-gray-600 bg-transparent">
               <Link href="https://github.com" target="_blank">
                 <Star className="mr-2 h-4 w-4" />
