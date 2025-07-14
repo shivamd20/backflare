@@ -1,21 +1,29 @@
-import { HeroSection } from "@/components/landingpage/HeroSection";
-import { ArchitecturalPillars } from "@/components/landingpage/ArchitecturalPillars";
-import { HiddenCostCrisis } from "@/components/landingpage/HiddenCostCrisis";
-import { CostEfficiencyBreakdown } from "@/components/landingpage/CostEfficiencyBreakdown";
-import { ArchitectureOverview } from "@/components/landingpage/ArchitectureOverview";
-import { DevelopmentRoadmap } from "@/components/landingpage/DevelopmentRoadmap";
-import { FinalCTA } from "@/components/landingpage/FinalCTA";
+import { HeroSection } from "@/components/hero-section"
+import { ArchitecturalPillars } from "@/components/architectural-pillars"
+import { HiddenCostCrisis } from "@/components/hidden-cost-crisis"
+import { CostEfficiencyBreakdown } from "@/components/cost-efficiency-breakdown"
+import { ArchitectureOverview } from "@/components/architecture-overview"
+import { DevelopmentRoadmap } from "@/components/development-roadmap"
+import { FinalCTA } from "@/components/final-cta"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { GoogleDriveFocus } from "@/components/google-drive-focus"
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeroSection />
-      <ArchitecturalPillars />
-      <HiddenCostCrisis />
-      <CostEfficiencyBreakdown />
-      <ArchitectureOverview />
-      <DevelopmentRoadmap />
-      <FinalCTA />
-    </main>
-  );
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <ArchitecturalPillars />
+        <GoogleDriveFocus />
+        <HiddenCostCrisis />
+        <CostEfficiencyBreakdown />
+        <ArchitectureOverview />
+        <DevelopmentRoadmap />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </div>
+  )
 }
