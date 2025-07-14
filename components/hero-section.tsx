@@ -32,7 +32,7 @@ export function HeroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" asChild className="border-gray-300 dark:border-gray-600 bg-transparent">
-              <Link href="https://github.com" target="_blank">
+              <Link href="https://github.com/shivamd20/backflare" target="_blank">
                 <Github className="mr-2 h-4 w-4" />
                 View on GitHub
               </Link>
