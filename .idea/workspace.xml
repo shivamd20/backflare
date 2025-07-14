@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="146dbabc-b4bf-447e-929d-32fc035e0257" name="Changes" comment="Add core landing page components&#10;&#10;Introduce initial landing page sections, including:&#10;- Hero section&#10;- Architectural pillars&#10;- Architecture overview&#10;- Cost efficiency breakdown&#10;- Hidden cost crisis&#10;- Development roadmap&#10;- Final call-to-action (CTA)&#10;&#10;Additionally, implement reusable UI components (`Card`, `Button`, `ThemeToggle`) and configure TailwindCSS. Also include supporting utilities and dependencies.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landingpage/FinalCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landingpage/FinalCTA.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/landingpage/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/landingpage/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752515554462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add core landing page components&#10;&#10;Introduce initial landing page sections, including:&#10;- Hero section&#10;- Architectural pillars&#10;- Architecture overview&#10;- Cost efficiency breakdown&#10;- Hidden cost crisis&#10;- Development roadmap&#10;- Final call-to-action (CTA)&#10;&#10;Additionally, implement reusable UI components (`Card`, `Button`, `ThemeToggle`) and configure TailwindCSS. Also include supporting utilities and dependencies.">
+      <option name="closed" value="true" />
+      <created>1752515743584</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752515743584</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add core landing page components&#10;&#10;Introduce initial landing page sections, including:&#10;- Hero section&#10;- Architectural pillars&#10;- Architecture overview&#10;- Cost efficiency breakdown&#10;- Hidden cost crisis&#10;- Development roadmap&#10;- Final call-to-action (CTA)&#10;&#10;Additionally, implement reusable UI components (`Card`, `Button`, `ThemeToggle`) and configure TailwindCSS. Also include supporting utilities and dependencies.">
+      <option name="closed" value="true" />
+      <created>1752515914327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752515914327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

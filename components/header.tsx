@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Github, Menu } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { CTA_LINK, GITHUB_LINK } from "@/lib/landing-page";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,13 +42,13 @@ export function Header() {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <Button variant="ghost" size="sm" asChild className="hidden md:flex">
-            <Link href="https://github.com" target="_blank">
+            <Link href={GITHUB_LINK} target="_blank">
               <Github className="h-4 w-4 mr-2" />
               GitHub
             </Link>
           </Button>
-          <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white hidden md:flex">
-            Get Started
+          <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white hidden md:flex" asChild>
+            <Link href={CTA_LINK}>Get Started</Link>
           </Button>
           <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu className="h-4 w-4" />
