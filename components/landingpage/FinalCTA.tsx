@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+import { CTA_LINK, GITHUB_LINK } from "@/lib/landing-page";
+import Link from "next/link";
 
 export function FinalCTA() {
   return (
@@ -13,13 +15,17 @@ export function FinalCTA() {
         </p>
         <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
           <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-            <Button size="lg" className="w-full">
-              Start Backing Up
-            </Button>
-            <Button size="lg" variant="outline" className="w-full">
-              <Github className="mr-2 h-5 w-5" />
-              Star on GitHub
-            </Button>
+            <Link href={CTA_LINK}>
+              <Button size="lg" className="w-full">
+                Start Backing Up
+              </Button>
+            </Link>
+            <Link href={GITHUB_LINK}>
+              <Button size="lg" variant="outline" className="w-full">
+                <Github className="mr-2 h-5 w-5" />
+                Star on GitHub
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
