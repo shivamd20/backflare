@@ -23,17 +23,15 @@ export function HeroSection() {
         </p>
         <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
           <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-            <Link href={CTA_LINK}>
-              <Button size="lg" className="w-full">
-                Get Started
-              </Button>
-            </Link>
-            <Link href={GITHUB_LINK}>
-              <Button size="lg" variant="outline" className="w-full">
+            <Button size="lg" className="w-full" asChild>
+              <Link href={CTA_LINK}>Get Started</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="w-full" asChild>
+              <Link href={GITHUB_LINK}>
                 <Github className="mr-2 h-5 w-5" />
                 View on GitHub
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
