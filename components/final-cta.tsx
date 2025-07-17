@@ -1,8 +1,23 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Star } from "lucide-react"
 import Link from "next/link"
+import { useSession, signIn } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 export function FinalCTA() {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  const handleBackupClick = () => {
+    if (session) {
+      router.push("/storage")
+    } else {
+      signIn("google")
+    }
+  }
+
   return (
     <section className="py-20 md:py-32 bg-gradient-to-r from-orange-500/10 via-orange-600/10 to-orange-500/10 dark:from-orange-500/20 dark:via-orange-600/20 dark:to-orange-500/20">
       <div className="container mx-auto px-4">
@@ -17,12 +32,17 @@ export function FinalCTA() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center mb-12">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button
+              size="lg"
+              className="bg-orange-500 hover:bg-orange-600 text-white"
+              onClick={handleBackupClick}
+              disabled={status === "loading"}
+            >
               Backup Google Drive Now
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" asChild className="border-gray-300 dark:border-gray-600 bg-transparent">
-              <Link href="https://github.com" target="_blank">
+              <Link href="https://github.com/shivamd20/backflare" target="_blank">
                 <Star className="mr-2 h-4 w-4" />
                 Star on GitHub
               </Link>
