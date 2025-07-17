@@ -1,8 +1,23 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Github, Zap } from "lucide-react"
 import Link from "next/link"
+import { useSession, signIn } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 export function HeroSection() {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  const handleGetStartedClick = () => {
+    if (session) {
+      router.push("/storage")
+    } else {
+      signIn("google")
+    }
+  }
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-20 md:py-32">
       <div className="container mx-auto px-4 relative">
@@ -27,7 +42,12 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white border-0">
+            <Button
+              size="lg"
+              className="bg-orange-500 hover:bg-orange-600 text-white border-0"
+              onClick={handleGetStartedClick}
+              disabled={status === "loading"}
+            >
               Get Started
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
