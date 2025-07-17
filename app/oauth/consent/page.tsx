@@ -11,11 +11,13 @@ export default function OAuthConsentPage() {
       <Header />
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <OAuthConsentHeader />
+        <div className="my-8">
+          <ConsentActions />
+        </div>
         <div className="space-y-12">
           <ScopeExplanation />
           <SecurityAssurances />
           <VisualFlow />
-          <ConsentActions />
         </div>
       </main>
     </div>
