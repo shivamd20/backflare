@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog"
 import { ArrowRight, HelpCircle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import {signIn} from "next-auth/react";
 
 interface ConsentActionsProps {
   primaryButtonText?: string
@@ -24,16 +25,14 @@ export function ConsentActions({
   primaryButtonText = "Authorize Google Drive Access",
   secondaryButtonText = "Why is this needed?",
   skipButtonText = "Skip for Now",
-  onAuthorize,
   onSkip,
 }: ConsentActionsProps) {
+
+
   const handleAuthorize = () => {
-    if (onAuthorize) {
-      onAuthorize()
-    } else {
-      // Default OAuth flow - replace with actual OAuth URL
-      window.location.href = "/api/auth/google"
-    }
+
+   signIn('google', { callbackUrl: '/backflare/storage' })
+
   }
 
   const handleSkip = () => {
@@ -41,7 +40,7 @@ export function ConsentActions({
       onSkip()
     } else {
       // Default skip behavior - redirect to main page
-      window.location.href = "/"
+      window.location.href = "/backflare"
     }
   }
 
