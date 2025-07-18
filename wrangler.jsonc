@@ -11,6 +11,13 @@
 		"nodejs_compat",
 		"global_fetch_strictly_public"
 	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "backflare-db",
+			"database_id": "441729bd-281d-4319-99d0-7b1e673ad831"
+		}
+	],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".open-next/assets"
