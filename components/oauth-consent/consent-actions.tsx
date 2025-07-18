@@ -65,10 +65,9 @@ export function ConsentActions({
                 <DialogTitle>Why does Backflare need Google Drive access?</DialogTitle>
                 <DialogDescription className="text-left space-y-4 pt-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Backup Your Files</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Read-Only Google Drive Access</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      We need read access to create secure, incremental backups of your Google Drive files. This ensures
-                      you never lose important data.
+                      We need read-only access to your Google Drive files and their metadata. This allows us to create secure, incremental backups of your files to ensure you never lose important data. We cannot view, edit, or delete any of your files.
                     </p>
                   </div>
 
