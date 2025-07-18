@@ -31,7 +31,10 @@ export function ConsentActions({
 
   const handleAuthorize = () => {
 
-   signIn('google', { callbackUrl: '/backflare/storage' })
+   signIn('google-drive', {
+     scope: 'openid email profile https://www.googleapis.com/auth/drive.file',
+     prompt: 'consent',
+   })
 
   }
 
